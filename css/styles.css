@@ -190,6 +190,7 @@ section[id]{scroll-margin-top:88px}
   display:grid;grid-template-columns:0.95fr 1.05fr;gap:64px;align-items:center;
 }
 .collage{position:relative;height:560px}
+.collage-dots{display:none}
 .tile{
   position:absolute;border-radius:22px;overflow:hidden;
   box-shadow:0 34px 66px -36px rgba(28,20,24,.5);border:3px solid #fff;
@@ -412,13 +413,25 @@ section[id]{scroll-margin-top:88px}
 
 @media (max-width:860px){
   .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-media{max-width:440px;width:100%;margin:0 auto}
   .collage{
-    height:auto;max-width:440px;width:100%;margin:0 auto;
-    display:grid;grid-template-columns:1.15fr .85fr;grid-auto-rows:120px;gap:12px;
+    height:auto;width:100%;
+    display:flex;gap:14px;overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
     opacity:1;animation:none;
   }
-  .tile{position:relative;inset:auto;width:auto;height:auto;aspect-ratio:auto;animation:none;margin:0}
-  .tile-1{grid-row:1/3}
+  .collage::-webkit-scrollbar{display:none}
+  .tile{
+    position:relative;inset:auto;flex:0 0 100%;width:100%;height:auto;
+    aspect-ratio:3/4;scroll-snap-align:center;animation:none;margin:0;
+  }
+  .collage-dots{display:flex;justify-content:center;gap:8px;margin-top:16px}
+  .collage-dots button{
+    width:8px;height:8px;border-radius:50%;border:0;padding:0;cursor:pointer;
+    background:rgba(28,20,24,.18);transition:background .3s ease,transform .3s ease;
+  }
+  .collage-dots button.active{background:var(--pink);transform:scale(1.3)}
   .service-card{padding:32px 28px}
   [data-title]{opacity:1;transform:none;transition:none}
   .main-nav{display:none}
@@ -440,7 +453,8 @@ section[id]{scroll-margin-top:88px}
   .hero{padding:104px 18px 52px}
   .hero h1{font-size:clamp(34px,9vw,52px)}
   .hero-grid{gap:28px}
-  .collage{grid-auto-rows:100px;gap:10px;max-width:380px}
+  .hero-media{max-width:380px}
+  .collage{gap:10px}
   .hero-stats{
     display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
     margin-top:40px;padding-top:28px;

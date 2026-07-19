@@ -61,6 +61,37 @@
     a.addEventListener('click', function () { setMenu(false); });
   });
 
+  /* ---------- Hero carousel dots (mobile) ---------- */
+  var collage = document.getElementById('collage');
+  var dotsWrap = document.getElementById('collage-dots');
+  if (collage && dotsWrap) {
+    var tiles = collage.querySelectorAll('.tile');
+    tiles.forEach(function (tile, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Show image ' + (i + 1));
+      b.addEventListener('click', function () {
+        collage.scrollTo({
+          left: tile.offsetLeft - tiles[0].offsetLeft,
+          behavior: reduce ? 'auto' : 'smooth'
+        });
+      });
+      dotsWrap.appendChild(b);
+    });
+    var dots = dotsWrap.querySelectorAll('button');
+    var syncDots = function () {
+      var step = tiles.length > 1
+        ? (tiles[1].offsetLeft - tiles[0].offsetLeft)
+        : collage.clientWidth;
+      var i = Math.round(collage.scrollLeft / (step || 1));
+      i = Math.max(0, Math.min(tiles.length - 1, i));
+      dots.forEach(function (d, j) { d.classList.toggle('active', j === i); });
+    };
+    syncDots();
+    collage.addEventListener('scroll', function () { requestAnimationFrame(syncDots); }, { passive: true });
+    window.addEventListener('resize', syncDots);
+  }
+
   /* ---------- Before/After sliders ---------- */
   document.querySelectorAll('[data-ba]').forEach(function (wrap) {
     var top = wrap.querySelector('[data-ba-top]');
