@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RetouchByJason — Professional Photo Editing &amp; Graphic Design</title>
 <meta name="description" content="Professional photo editing and graphic design services. Hand-edited retouching, background cleanup, colour correction, and custom graphics delivered in 6–12 hours. From $3 per image.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +16,10 @@
 <!-- ===== HEADER ===== -->
 <header class="site-header" id="header">
   <div class="header-inner" id="header-inner">
-    <a class="logo" id="logo" href="#home">Retouch<span>ByJason</span></a>
+    <a class="logo" id="logo" href="#home">
+      <svg class="logo-mark" width="38" height="38" viewBox="0 0 128 128" aria-hidden="true"><circle cx="64" cy="64" r="58" fill="none" stroke="currentColor" stroke-width="3"/><path d="M50 44 V86 M50 56 q0 -12 13 -12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M82 42 V78 q0 12 -13 12 q-9 0 -12 -7" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="82" cy="34" r="4" fill="var(--pink)"/></svg>
+      <span class="logo-word"><span>Retouch</span><span class="logo-accent">ByJason</span></span>
+    </a>
     <nav class="main-nav" aria-label="Primary">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
@@ -62,9 +66,9 @@
   <div class="hero-grid">
 
     <div class="collage" data-hero-fade style="animation-delay:.35s">
-      <div class="tile tile-1"><img src="assets/p15079473.jpg" alt="Retouched portrait photo"></div>
-      <div class="tile tile-2"><img src="assets/p247322.jpg" alt="Beauty retouching example"></div>
-      <div class="tile tile-3"><img src="assets/p12576862.jpg" alt="Creative photo composite"></div>
+      <div class="tile tile-1"><img src="assets/16-after.jpg" alt="Retouched portrait photo"></div>
+      <div class="tile tile-2"><img src="assets/1-after.jpg" alt="Creative photo composite"></div>
+      <div class="tile tile-3"><img src="assets/14-after.jpg" alt="Fashion retouching example"></div>
     </div>
 
     <div class="hero-text">
@@ -74,7 +78,7 @@
         <span class="line-mask"><span data-line class="accent" style="animation-delay:.24s">Graphic Design</span></span>
         <span class="line-mask"><span data-line style="animation-delay:.36s">Services</span></span>
       </h1>
-      <p class="hero-copy" data-hero-fade style="animation-delay:.6s">Upload your photos and get hand-edited results from a professional retoucher — every detail refined manually, not by an algorithm. Retouching, background removal, colour correction, and custom graphic design delivered in <strong>under 6 hours</strong>.</p>
+      <p class="hero-copy" data-hero-fade style="animation-delay:.6s">Upload your photos and get professionally hand-edited results. Every detail is refined manually—not by AI or an algorithm. From retouching and background removal to color correction and custom graphic design, everything is delivered in <strong>under 6 hours</strong>.</p>
       <div class="hero-actions" data-hero-fade style="animation-delay:.74s">
         <a href="mailto:retouchby.jason@gmail.com" class="btn btn-outline">Get a Sample</a>
         <a href="https://www.instagram.com/jason_phung.kv/" target="_blank" rel="noopener" class="btn btn-pink" data-magnetic>Order Now</a>
@@ -96,12 +100,36 @@
       <h2 data-title>See the Difference</h2>
       <p>Drag the slider to reveal the transformation. Every detail is refined by hand.</p>
     </div>
-    <div class="grid-2 portfolio-grid">
+    <div class="grid-3 portfolio-grid">
 
       <div data-reveal data-x="l">
         <div class="ba-card" data-ba>
-          <div class="ba-layer"><img src="assets/p19284976.jpg" alt="Beauty retouch — after"></div>
-          <div class="ba-layer ba-top" data-ba-top><img src="assets/p9535387.jpg" alt="Beauty retouch — before"></div>
+          <div class="ba-layer"><img src="assets/1-after.jpg" alt="Creative composite — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/1-before.jpg" alt="Creative composite — before" loading="lazy"></div>
+          <div class="ba-pill ba-pill-before">BEFORE</div>
+          <div class="ba-pill ba-pill-after">AFTER</div>
+          <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
+        </div>
+        <div class="ba-title">Creative Composite</div>
+        <div class="ba-tag">Scene &amp; lighting</div>
+      </div>
+
+      <div data-reveal>
+        <div class="ba-card" data-ba>
+          <div class="ba-layer"><img src="assets/9-after.jpg" alt="Stage composite — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/9-before.jpg" alt="Stage composite — before" loading="lazy"></div>
+          <div class="ba-pill ba-pill-before">BEFORE</div>
+          <div class="ba-pill ba-pill-after">AFTER</div>
+          <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
+        </div>
+        <div class="ba-title">Stage Composite</div>
+        <div class="ba-tag">Composite &amp; effects</div>
+      </div>
+
+      <div data-reveal data-x="r">
+        <div class="ba-card" data-ba>
+          <div class="ba-layer"><img src="assets/10-after.jpg" alt="Beauty retouch — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/10-before.jpg" alt="Beauty retouch — before" loading="lazy"></div>
           <div class="ba-pill ba-pill-before">BEFORE</div>
           <div class="ba-pill ba-pill-after">AFTER</div>
           <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
@@ -110,10 +138,10 @@
         <div class="ba-tag">Natural skin &amp; tone</div>
       </div>
 
-      <div data-reveal data-x="r">
+      <div data-reveal data-x="l">
         <div class="ba-card" data-ba>
-          <div class="ba-layer"><img src="assets/p247322.jpg" alt="Dodge and burn — after"></div>
-          <div class="ba-layer ba-top" data-ba-top><img src="assets/p12576862.jpg" alt="Dodge and burn — before"></div>
+          <div class="ba-layer"><img src="assets/7-after.jpg" alt="Dodge and burn — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/7-before.jpg" alt="Dodge and burn — before" loading="lazy"></div>
           <div class="ba-pill ba-pill-before">BEFORE</div>
           <div class="ba-pill ba-pill-after">AFTER</div>
           <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
@@ -122,10 +150,22 @@
         <div class="ba-tag">High-end skin work</div>
       </div>
 
-      <div data-reveal data-x="l">
+      <div data-reveal>
         <div class="ba-card" data-ba>
-          <div class="ba-layer"><img src="assets/p16574941.jpg" alt="Colour grading — after"></div>
-          <div class="ba-layer ba-top" data-ba-top><img src="assets/p15079473.jpg" alt="Colour grading — before"></div>
+          <div class="ba-layer"><img src="assets/2-after.jpg" alt="Editorial retouch — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/2-before.jpg" alt="Editorial retouch — before" loading="lazy"></div>
+          <div class="ba-pill ba-pill-before">BEFORE</div>
+          <div class="ba-pill ba-pill-after">AFTER</div>
+          <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
+        </div>
+        <div class="ba-title">Editorial Retouch</div>
+        <div class="ba-tag">Skin &amp; colour</div>
+      </div>
+
+      <div data-reveal data-x="r">
+        <div class="ba-card" data-ba>
+          <div class="ba-layer"><img src="assets/16-after.jpg" alt="Colour grading — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/16-before.jpg" alt="Colour grading — before" loading="lazy"></div>
           <div class="ba-pill ba-pill-before">BEFORE</div>
           <div class="ba-pill ba-pill-after">AFTER</div>
           <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
@@ -134,16 +174,76 @@
         <div class="ba-tag">Mood &amp; consistency</div>
       </div>
 
-      <div data-reveal data-x="r">
+      <div data-reveal data-x="l">
         <div class="ba-card" data-ba>
-          <div class="ba-layer"><img src="assets/p594421.jpg" alt="Graduation portrait — after"></div>
-          <div class="ba-layer ba-top" data-ba-top><img src="assets/p19284976.jpg" alt="Graduation portrait — before"></div>
+          <div class="ba-layer"><img src="assets/11-after.jpg" alt="Portrait — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/11-before.jpg" alt="Portrait — before" loading="lazy"></div>
           <div class="ba-pill ba-pill-before">BEFORE</div>
           <div class="ba-pill ba-pill-after">AFTER</div>
           <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
         </div>
-        <div class="ba-title">Graduation Portrait</div>
+        <div class="ba-title">Portrait</div>
         <div class="ba-tag">Background &amp; finish</div>
+      </div>
+
+      <div data-reveal>
+        <div class="ba-card" data-ba>
+          <div class="ba-layer"><img src="assets/8-after.jpg" alt="Skin retouch — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/8-before.jpg" alt="Skin retouch — before" loading="lazy"></div>
+          <div class="ba-pill ba-pill-before">BEFORE</div>
+          <div class="ba-pill ba-pill-after">AFTER</div>
+          <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
+        </div>
+        <div class="ba-title">Skin Retouch</div>
+        <div class="ba-tag">Soft &amp; even tone</div>
+      </div>
+
+      <div data-reveal data-x="r">
+        <div class="ba-card" data-ba>
+          <div class="ba-layer"><img src="assets/4-after.jpg" alt="Body retouch — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/4-before.jpg" alt="Body retouch — before" loading="lazy"></div>
+          <div class="ba-pill ba-pill-before">BEFORE</div>
+          <div class="ba-pill ba-pill-after">AFTER</div>
+          <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
+        </div>
+        <div class="ba-title">Body Retouch</div>
+        <div class="ba-tag">Shape &amp; smooth finish</div>
+      </div>
+
+      <div data-reveal data-x="l">
+        <div class="ba-card" data-ba>
+          <div class="ba-layer"><img src="assets/12-after.jpg" alt="Full-body retouch — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/12-before.jpg" alt="Full-body retouch — before" loading="lazy"></div>
+          <div class="ba-pill ba-pill-before">BEFORE</div>
+          <div class="ba-pill ba-pill-after">AFTER</div>
+          <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
+        </div>
+        <div class="ba-title">Full-Body Retouch</div>
+        <div class="ba-tag">Studio finish</div>
+      </div>
+
+      <div data-reveal>
+        <div class="ba-card" data-ba>
+          <div class="ba-layer"><img src="assets/14-after.jpg" alt="Fashion retouch — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/14-before.jpg" alt="Fashion retouch — before" loading="lazy"></div>
+          <div class="ba-pill ba-pill-before">BEFORE</div>
+          <div class="ba-pill ba-pill-after">AFTER</div>
+          <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
+        </div>
+        <div class="ba-title">Fashion Retouch</div>
+        <div class="ba-tag">Colour &amp; polish</div>
+      </div>
+
+      <div data-reveal data-x="r">
+        <div class="ba-card" data-ba>
+          <div class="ba-layer"><img src="assets/15-after.jpg" alt="Creative makeup retouch — after" loading="lazy"></div>
+          <div class="ba-layer ba-top" data-ba-top><img src="assets/15-before.jpg" alt="Creative makeup retouch — before" loading="lazy"></div>
+          <div class="ba-pill ba-pill-before">BEFORE</div>
+          <div class="ba-pill ba-pill-after">AFTER</div>
+          <div class="ba-handle" data-ba-handle><div class="ba-knob">‹&nbsp;›</div></div>
+        </div>
+        <div class="ba-title">Creative Makeup</div>
+        <div class="ba-tag">Detail &amp; colour</div>
       </div>
 
     </div>
@@ -186,7 +286,7 @@
       <div class="eyebrow">Simple Process</div>
       <h2 data-title>How It Works</h2>
     </div>
-    <div class="grid-3 process-grid">
+    <div class="grid-4 process-grid">
       <div class="step" data-reveal>
         <div class="step-num">1</div>
         <h3>Send Your Photos</h3>
@@ -194,13 +294,18 @@
       </div>
       <div class="step" data-reveal>
         <div class="step-num">2</div>
-        <h3>I Work by Hand</h3>
-        <p>Every detail retouched manually for perfect, realistic skin — never a one-click plugin.</p>
+        <h3>Confirm &amp; Pay</h3>
+        <p>We'll review your request, confirm the price and turnaround time, then send you a secure payment link before editing begins.</p>
       </div>
       <div class="step" data-reveal>
         <div class="step-num">3</div>
+        <h3>Hand Retouching</h3>
+        <p>Every detail retouched manually for perfect, realistic skin — never a one-click plugin.</p>
+      </div>
+      <div class="step" data-reveal>
+        <div class="step-num">4</div>
         <h3>Download Results</h3>
-        <p>Get your polished photos delivered fast — usually within a day, rush in 6–12 hours.</p>
+        <p>Receive your polished photos fast—typically within 24 hours, with rush delivery available in 6–12 hours.</p>
       </div>
     </div>
   </div>
@@ -248,7 +353,7 @@
 
       <div class="price-card" data-reveal>
         <div class="price-name">High-End Retouching</div>
-        <div class="price-row"><span class="price-amount price-amount-md">Custom</span><span class="price-per">/ quote</span></div>
+        <div class="price-row"><span class="price-amount">$8</span><span class="price-per">/ image</span></div>
         <p class="price-desc">Editorial-grade, fully manual work for perfect realistic skin.</p>
         <div class="price-features">
           <div><span class="check">✓</span>Manual skin retouch, no plugins</div>
@@ -258,7 +363,7 @@
           <div><span class="check">✓</span>Skin colour correction &amp; even tone</div>
           <div><span class="check">✓</span>Special editing requirements</div>
         </div>
-        <a href="#contact" class="btn-card btn-card-outline">Get a Quote</a>
+        <a href="#contact" class="btn-card btn-card-outline">Order Now</a>
       </div>
 
       <div class="price-card" data-reveal>
@@ -342,10 +447,10 @@
         <div class="contact-title">Follow &amp; DM</div>
         <div class="contact-detail">@jason_phung.kv</div>
       </a>
-      <a href="https://www.instagram.com/jason_phung.kv/" target="_blank" rel="noopener" class="contact-card" data-reveal>
-        <div class="contact-kicker">Chat</div>
+      <a href="https://wa.me/84702303618" target="_blank" rel="noopener" class="contact-card" data-reveal>
+        <div class="contact-kicker">WhatsApp</div>
         <div class="contact-title">Start a Conversation</div>
-        <div class="contact-detail">Message me anytime</div>
+        <div class="contact-detail">(+84) 70 230 3618</div>
       </a>
     </div>
 
