@@ -20,6 +20,12 @@
   document.querySelectorAll('[data-title]').forEach(function (el) {
     io.observe(el);
   });
+  /* Safety: reveal any title still hidden after load (e.g. above the fold) */
+  setTimeout(function () {
+    document.querySelectorAll('[data-title]:not(.in)').forEach(function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+    });
+  }, 400);
 
   /* ---------- Header scroll state + progress bar ---------- */
   var header = document.getElementById('header');
@@ -72,14 +78,43 @@
       var cx = e.touches ? e.touches[0].clientX : e.clientX;
       set(((cx - r.left) / r.width) * 100);
     }
+    var startX = 0, startY = 0, pending = false;
+
     wrap.addEventListener('pointerdown', function (e) {
-      drag = true;
-      try { wrap.setPointerCapture(e.pointerId); } catch (_) {}
-      move(e);
+      if (e.pointerType === 'touch') {
+        /* Direction lock: don't grab the slider until the gesture is
+           clearly horizontal, so vertical swipes scroll the page. */
+        pending = true;
+        startX = e.clientX;
+        startY = e.clientY;
+      } else {
+        drag = true;
+        try { wrap.setPointerCapture(e.pointerId); } catch (_) {}
+        move(e);
+      }
     });
-    wrap.addEventListener('pointermove', function (e) { if (drag) move(e); });
-    wrap.addEventListener('pointerup', function () { drag = false; });
-    wrap.addEventListener('pointercancel', function () { drag = false; });
+    wrap.addEventListener('pointermove', function (e) {
+      if (pending) {
+        var dx = Math.abs(e.clientX - startX);
+        var dy = Math.abs(e.clientY - startY);
+        if (dx > 8 && dx > dy) {
+          pending = false;
+          drag = true;
+          try { wrap.setPointerCapture(e.pointerId); } catch (_) {}
+        } else if (dy > 8) {
+          pending = false;
+          return;
+        }
+      }
+      if (drag) move(e);
+    });
+    wrap.addEventListener('pointerup', function (e) {
+      /* A simple tap (no direction decided) still moves the slider. */
+      if (pending) move(e);
+      pending = false;
+      drag = false;
+    });
+    wrap.addEventListener('pointercancel', function () { pending = false; drag = false; });
     set(50);
   });
 
@@ -156,6 +191,13 @@
         panel.style.maxHeight = panel.scrollHeight + 'px';
         panel.style.opacity = '1';
       }
+    });
+  });
+  window.addEventListener('resize', function () {
+    items.forEach(function (item) {
+      if (item.getAttribute('data-open') !== '1') return;
+      var panel = item.querySelector('[data-faq-panel]');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
     });
   });
 })();
